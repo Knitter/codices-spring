@@ -120,6 +120,14 @@ public class Author {
         this.items = items;
     }
 
+    public String getLastFirstName() {
+        if (surname == null || surname.isEmpty()) {
+            return name;
+        }
+
+        return surname + (name != null && !name.isEmpty() ? ", " + name : "");
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

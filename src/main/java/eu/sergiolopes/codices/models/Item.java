@@ -82,7 +82,7 @@ public class Item {
     @JoinColumn(name = "owned_by_id")
     private Account owner;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
