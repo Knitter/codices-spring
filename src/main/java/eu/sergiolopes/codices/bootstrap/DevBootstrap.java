@@ -24,14 +24,14 @@ public class DevBootstrap implements CommandLineRunner {
 
     private final AccountRepository accountRepository;
     private final AuthorRepository authorRepository;
-    private final ColleciontRepository collectRepository;
+    private final CollectionRepository collectRepository;
     private final FormatRepository formatRepository;
     private final GenreRepository genreRepository;
     private final ItemRepository itemRepository;
     private final PublisherRepository publisherRepository;
     private final SeriesRepository seriesRepository;
 
-    public DevBootstrap(AccountRepository accountRepository, AuthorRepository authorRepository, ColleciontRepository collectRepository,
+    public DevBootstrap(AccountRepository accountRepository, AuthorRepository authorRepository, CollectionRepository collectRepository,
                         FormatRepository formatRepository, GenreRepository genreRepository, ItemRepository itemRepository,
                         PublisherRepository publisherRepository, SeriesRepository seriesRepository) {
 
@@ -1003,96 +1003,185 @@ public class DevBootstrap implements CommandLineRunner {
         book.setAddedOn(now);
         Item book45 = itemRepository.save(book);
 
-        book1.addAuthor(scottAdams);
-        book2.addAuthor(kevinAnderson);
-        book3.addAuthor(isaacAsimov);
-        book4.addAuthor(isaacAsimov);
-        book5.addAuthor(isaacAsimov);
-        book6.addAuthor(isaacAsimov);
-        book7.addAuthor(isaacAsimov);
-        book8.addAuthor(isaacAsimov);
-        book9.addAuthor(petterBrett);
-        book10.addAuthor(petterBrett);
-        book11.addAuthor(petterBrett);
-        book12.addAuthor(petterBrett);
-        book13.addAuthor(petterBrett);
-        book14.addAuthor(daveBara);
-        book15.addAuthor(daveBara);
-        book16.addAuthor(raymondFeist);
-        book17.addAuthor(raymondFeist);
-        book18.addAuthor(raymondFeist);
-        book19.addAuthor(raymondFeist);
-        book20.addAuthor(raymondFeist);
-        book21.addAuthor(raymondFeist);
-        book22.addAuthor(raymondFeist);
-        book23.addAuthor(raymondFeist);
-        book24.addAuthor(raymondFeist);
-        book25.addAuthor(raymondFeist);
-        book26.addAuthor(raymondFeist);
-        book27.addAuthor(raymondFeist);
-        book28.addAuthor(raymondFeist);
-        book29.addAuthor(raymondFeist);
-        book30.addAuthor(raymondFeist);
-        book31.addAuthor(raymondFeist);
-        book32.addAuthor(forsythFrederick);
-        book33.addAuthor(richardFord);
-        book34.addAuthor(richardFord);
-        book35.addAuthor(richardFord);
-        book36.addAuthor(gillianFlynn);
-        book37.addAuthor(gillianFlynn);
-        book38.addAuthor(terryGoodkind);
-        book39.addAuthor(terryGoodkind);
-        book40.addAuthor(terryGoodkind);
-        book41.addAuthor(terryGoodkind);
-        book42.addAuthor(terryGoodkind);
-        book43.addAuthor(paulHoffman);
-        book44.addAuthor(paulHoffman);
-        book45.addAuthor(paulHoffman);
-
         book1.addGenre(humor);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(scienceFiction);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(thriller);
-        book1.addGenre(thriller);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
-        book1.addGenre(fantasy);
+        book1.addAuthor(scottAdams);
+        itemRepository.save(book1);
+
+        book2.addAuthor(kevinAnderson);
+        book2.addGenre(scienceFiction);
+        itemRepository.save(book2);
+
+        book3.addAuthor(isaacAsimov);
+        book3.addGenre(scienceFiction);
+        itemRepository.save(book3);
+
+        book4.addAuthor(isaacAsimov);
+        book4.addGenre(scienceFiction);
+        itemRepository.save(book4);
+
+        book5.addAuthor(isaacAsimov);
+        book5.addGenre(scienceFiction);
+        itemRepository.save(book5);
+
+        book6.addAuthor(isaacAsimov);
+        book6.addGenre(scienceFiction);
+        itemRepository.save(book6);
+
+        book7.addAuthor(isaacAsimov);
+        book7.addGenre(scienceFiction);
+        itemRepository.save(book7);
+
+        book8.addAuthor(isaacAsimov);
+        book8.addGenre(scienceFiction);
+        itemRepository.save(book8);
+
+        book9.addAuthor(petterBrett);
+        book9.addGenre(fantasy);
+        itemRepository.save(book9);
+
+        book10.addAuthor(petterBrett);
+        book10.addGenre(fantasy);
+        itemRepository.save(book10);
+
+        book11.addAuthor(petterBrett);
+        book11.addGenre(fantasy);
+        itemRepository.save(book11);
+
+        book12.addAuthor(petterBrett);
+        book12.addGenre(fantasy);
+        itemRepository.save(book12);
+
+        book13.addAuthor(petterBrett);
+        book13.addGenre(fantasy);
+        itemRepository.save(book13);
+
+        book14.addAuthor(daveBara);
+        book14.addGenre(scienceFiction);
+        itemRepository.save(book14);
+
+        book15.addAuthor(daveBara);
+        book15.addGenre(scienceFiction);
+        itemRepository.save(book15);
+
+        book16.addAuthor(raymondFeist);
+        book16.addGenre(fantasy);
+        itemRepository.save(book16);
+
+        book17.addAuthor(raymondFeist);
+        book17.addGenre(fantasy);
+        itemRepository.save(book17);
+
+        book18.addAuthor(raymondFeist);
+        book18.addGenre(fantasy);
+        itemRepository.save(book18);
+
+        book19.addAuthor(raymondFeist);
+        book19.addGenre(fantasy);
+        itemRepository.save(book19);
+
+        book20.addAuthor(raymondFeist);
+        book20.addGenre(fantasy);
+        itemRepository.save(book20);
+
+        book21.addAuthor(raymondFeist);
+        book21.addGenre(fantasy);
+        itemRepository.save(book21);
+
+        book22.addAuthor(raymondFeist);
+        book22.addGenre(fantasy);
+        itemRepository.save(book22);
+
+        book23.addAuthor(raymondFeist);
+        book23.addGenre(fantasy);
+        itemRepository.save(book23);
+
+        book24.addAuthor(raymondFeist);
+        book24.addGenre(fantasy);
+        itemRepository.save(book24);
+
+        book25.addAuthor(raymondFeist);
+        book25.addGenre(fantasy);
+        itemRepository.save(book25);
+
+        book26.addAuthor(raymondFeist);
+        book26.addGenre(fantasy);
+        itemRepository.save(book26);
+
+        book27.addAuthor(raymondFeist);
+        book27.addGenre(fantasy);
+        itemRepository.save(book27);
+
+        book28.addAuthor(raymondFeist);
+        book28.addGenre(fantasy);
+        itemRepository.save(book28);
+
+        book29.addAuthor(raymondFeist);
+        book29.addGenre(fantasy);
+        itemRepository.save(book29);
+
+        book30.addAuthor(raymondFeist);
+        book30.addGenre(fantasy);
+        itemRepository.save(book30);
+
+        book31.addAuthor(raymondFeist);
+        book31.addGenre(fantasy);
+        itemRepository.save(book31);
+
+        book32.addAuthor(forsythFrederick);
+        book32.addGenre(fantasy);
+        itemRepository.save(book32);
+
+        book33.addAuthor(richardFord);
+        book33.addGenre(fantasy);
+        itemRepository.save(book33);
+
+        book34.addAuthor(richardFord);
+        book34.addGenre(fantasy);
+        itemRepository.save(book34);
+
+        book35.addAuthor(richardFord);
+        book35.addGenre(thriller);
+        itemRepository.save(book35);
+
+        book36.addAuthor(gillianFlynn);
+        book36.addGenre(thriller);
+        itemRepository.save(book36);
+
+        book37.addAuthor(gillianFlynn);
+        book37.addGenre(fantasy);
+        itemRepository.save(book37);
+
+        book38.addAuthor(terryGoodkind);
+        book38.addGenre(fantasy);
+        itemRepository.save(book38);
+
+        book39.addAuthor(terryGoodkind);
+        book39.addGenre(fantasy);
+        itemRepository.save(book39);
+
+        book40.addAuthor(terryGoodkind);
+        book40.addGenre(fantasy);
+        itemRepository.save(book40);
+
+        book41.addAuthor(terryGoodkind);
+        book41.addGenre(fantasy);
+        itemRepository.save(book41);
+
+        book42.addAuthor(terryGoodkind);
+        book42.addGenre(fantasy);
+        itemRepository.save(book42);
+
+        book43.addAuthor(paulHoffman);
+        book43.addGenre(fantasy);
+        itemRepository.save(book43);
+
+        book44.addAuthor(paulHoffman);
+        book44.addGenre(fantasy);
+        itemRepository.save(book44);
+
+        book45.addAuthor(paulHoffman);
+        book45.addGenre(fantasy);
+        itemRepository.save(book45);
 
         System.out.println("Accounts: " + accountRepository.count());
         System.out.println("Authors: " + authorRepository.count());
