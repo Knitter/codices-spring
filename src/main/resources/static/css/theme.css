@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --bs-body-bg: rgb(246, 248, 251);
+    /* -- */
+    --codices-card-bg: rgb(255, 255, 255);
+    --codices-body-color: rgb(24, 36, 51)
+}
 
 *,
 ::after,
@@ -7,7 +12,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     opacity: 1;
     overflow-y: scroll;
@@ -17,7 +22,7 @@ body {
 a {
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 li {
@@ -25,12 +30,11 @@ li {
 }
 
 h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.275rem;
     color: var(--bs-emphasis-color);
 }
 
-/* Layout for admin dashboard skeleton */
 .wrapper {
     align-items: stretch;
     display: flex;
@@ -52,16 +56,15 @@ h4 {
     overflow: hidden;
     transition: all 0.35s ease-in-out;
     width: 100%;
-    background: var(--bs-dark-bg-subtle);
+    /*background: var(--bs-dark-bg-subtle);*/
 }
-
-/* Sidebar Elements Style */
 
 .sidebar-logo {
     padding: 1.15rem;
 }
 
 .sidebar-logo a {
+    /*TODO: Update color based on theme */
     color: #e9ecef;
     font-size: 1.15rem;
     font-weight: 600;
@@ -75,6 +78,7 @@ h4 {
 }
 
 .sidebar-header {
+    /*TODO: Update color based on theme */
     color: #e9ecef;
     font-size: .75rem;
     padding: 1.5rem 1.5rem .375rem;
@@ -82,6 +86,7 @@ h4 {
 
 a.sidebar-link {
     padding: .625rem 1.625rem;
+    /*TODO: Update color based on theme */
     color: #e9ecef;
     position: relative;
     display: block;
@@ -123,14 +128,41 @@ a.sidebar-link {
 
 @media (min-width: 768px) {
     .content {
-        max-width: auto;
+        /*max-width: auto;*/
         width: auto;
     }
 }
 
 .card {
-    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
-    margin-bottom: 24px;
+    transition: transform .3s ease-out, opacity .3s ease-out, box-shadow .3s ease-out;
+    /*--tblr-card-spacer-y: 1rem;*/
+    /*--tblr-card-spacer-x: 1.25rem;*/
+    /*--tblr-card-title-spacer-y: 1.25rem;*/
+    /*--tblr-card-border-width: var(--tblr-border-width);*/
+    /*--tblr-card-border-color: var(--tblr-border-color-translucent);*/
+    /*--tblr-card-border-radius: var(--tblr-border-radius);*/
+    /*--tblr-card-box-shadow: var(--tblr-shadow-card);*/
+    /*--tblr-card-inner-border-radius: calc(var(--tblr-border-radius) - (var(--tblr-border-width)));*/
+    /*--tblr-card-cap-padding-y: 1rem;*/
+    /*--tblr-card-cap-padding-x: 1.25rem;*/
+    /*--tblr-card-cap-bg: var(--tblr-bg-surface-tertiary);*/
+    /*--tblr-card-cap-color: inherit;*/
+    /*--tblr-card-color: inherit;*/
+    /*--tblr-card-bg: var(--tblr-bg-surface);*/
+    /*--tblr-card-img-overlay-padding: 1rem;*/
+    /*--tblr-card-group-margin: 1.5rem;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /*height: var(--tblr-card-height);*/
+    color: var(--codices-body-color);
+    word-wrap: break-word;
+    background-color: var(--codices-card-bg);
+    background-clip: border-box;
+    /*border: var(--tblr-card-border-width) solid var(--tblr-card-border-color);*/
+    /*border-radius: var(--tblr-card-border-radius);*/
+    /*box-shadow: var(--tblr-card-box-shadow);*/
 }
 
 .illustration {
@@ -158,14 +190,14 @@ a.sidebar-link {
         margin-left: 0;
     }
 
-    .navbar,
-    footer {
+    .navbar, footer {
         width: 100vw;
     }
 }
 
 /* Theme Toggler */
 .theme-toggle {
+    /*TODO: Update feature */
     position: fixed;
     top: 50%;
     transform: translateY(-65%);
@@ -177,19 +209,19 @@ a.sidebar-link {
     background-color: var(--bs-body-color);
 }
 
-html[data-bs-theme="dark"] .theme-toggle .fa-sun,
-html[data-bs-theme="light"] .theme-toggle .fa-moon {
-    cursor: pointer;
-    padding: 10px;
-    display: block;
-    font-size: 1.25rem;
-    color: #FFF;
-}
+/*html[data-bs-theme="dark"] .theme-toggle .fa-sun,*/
+/*html[data-bs-theme="light"] .theme-toggle .fa-moon {*/
+/*    cursor: pointer;*/
+/*    padding: 10px;*/
+/*    display: block;*/
+/*    font-size: 1.25rem;*/
+/*    color: #FFF;*/
+/*}*/
 
-html[data-bs-theme="dark"] .theme-toggle .fa-moon {
-    display: none;
-}
+/*html[data-bs-theme="dark"] .theme-toggle .fa-moon {*/
+/*    display: none;*/
+/*}*/
 
-html[data-bs-theme="light"] .theme-toggle .fa-sun {
-    display: none;
-}
+/*html[data-bs-theme="light"] .theme-toggle .fa-sun {*/
+/*    display: none;*/
+/*}*/
